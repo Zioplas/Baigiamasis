@@ -5,7 +5,10 @@ class SlotMachine:
     def __init__(self, image_paths, image_size=(100, 100)):
         self.image_paths = image_paths
         self.image_size = image_size
-        self.images = [ImageTk.PhotoImage(Image.open(path).resize(image_size)) for path in image_paths]
+        self.images = []
+        for path in image_paths:
+            self.images.append(ImageTk.PhotoImage(Image.open(path).resize(image_size)))
+
 
     def spin(self):
         result = []

@@ -6,11 +6,12 @@ class SlotMachineDisplay:
         self.frame = Frame(window, bg="darkgreen")
         self.frame.grid(row=1, column=0, columnspan=3)
         self.images = []
+        self.labels = []
+
         for i in range(3):
             image = self.load_image(initial_image_path)
             self.images.append(image)
 
-        self.labels = []
         for i in range(3):
             label = Label(self.frame, image=self.images[i], relief="sunken", bg="purple")
             self.labels.append(label)
