@@ -30,18 +30,9 @@ symbols = [
     "watermelon.png",
 ]
 full_image_paths = [os.path.join(base_dir, "pictures", filename) for filename in symbols]
-machine = SlotMachine(full_image_paths)
+machine = SlotMachine(full_image_paths, base_dir)
 
-payouts = {
-    os.path.join(base_dir, "pictures", "dollar.png"): 10,
-    os.path.join(base_dir, "pictures", "bar.png"): 8,
-    os.path.join(base_dir, "pictures", "cherries.png"): 6,
-    os.path.join(base_dir, "pictures", "lemon.png"): 5,
-    os.path.join(base_dir, "pictures", "seven.png"): 20,
-    os.path.join(base_dir, "pictures", "watermelon.png"): 4,
-}
-
-payout = Payout(payouts)
+payout = Payout(base_dir)
 
 balance_display = BalanceDisplay(window)
 

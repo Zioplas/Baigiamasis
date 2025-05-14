@@ -7,7 +7,6 @@ class MenuDisplay:
         self.menu = Menu(window)
         window.config(menu=self.menu)
         self.submenu = Menu(self.menu, tearoff=0)
-
         self.menu.add_cascade(label="Meniu", menu=self.submenu)
         self.submenu.add_command(
-            label="Papildyti balansą", command=lambda: AddBalanceWindow(window, balance_display.balance_amount_label))
+            label="Papildyti balansą", command=lambda: AddBalanceWindow(window, balance_display))

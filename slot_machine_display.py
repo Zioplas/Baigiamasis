@@ -5,6 +5,7 @@ class SlotMachineDisplay:
     def __init__(self, window, initial_image_path):
         self.frame = Frame(window, bg="darkgreen")
         self.frame.grid(row=1, column=0, columnspan=3)
+
         self.images = []
         self.labels = []
 

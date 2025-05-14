@@ -7,6 +7,7 @@ class ButtonDisplay:
         self.window = window
         self.spin_slots = spin_slots
         self.base_dir = base_dir
+
         self.button_image = ImageTk.PhotoImage(
             Image.open(os.path.join(base_dir, "pictures", "spin_button.png")).resize((75, 75)))
         self.spin_button = Button(window, command=spin_slots, image=self.button_image, relief="flat", bg="darkgreen")
