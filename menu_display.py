@@ -1,6 +1,7 @@
 from tkinter import Menu
 from add_balance_window import AddBalanceWindow
 
+
 class MenuDisplay:
     def __init__(self, window, balance_display):
         self.balance_display = balance_display

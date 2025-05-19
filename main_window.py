@@ -46,6 +46,7 @@ error_display = ErrorDisplay(bet_display)
 
 slot_display = SlotMachineDisplay(window, full_image_paths[0])
 
+
 def spin_slots():
     error_display.error_label.config(text="")
 
@@ -64,12 +65,13 @@ def spin_slots():
         winnings = payout.check_for_payout(bet, new_symbols)
         balance += winnings
 
-        balance_display.balance_amount_label.config(text=str(balance))
+        balance_display.balance_amount_label.config(text=str(round(balance, 2)))
         win_display.win_amount_label.config(text=str(winnings))
 
     except ValueError:
         error_display.error_label.config(text="Enter a number in bet size")
 
-button_display = ButtonDisplay(window,spin_slots, base_dir)
+
+button_display = ButtonDisplay(window, spin_slots, base_dir)
 
 window.mainloop()

@@ -1,5 +1,6 @@
 from tkinter import Label, Frame, W
 
+
 class BalanceDisplay:
     def __init__(self, window):
         self.frame = Frame(window, bg="darkgreen")

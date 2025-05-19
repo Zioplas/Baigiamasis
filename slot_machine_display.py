@@ -1,6 +1,7 @@
 from tkinter import Frame, Label
 from PIL import Image, ImageTk
 
+
 class SlotMachineDisplay:
     def __init__(self, window, initial_image_path):
         self.frame = Frame(window, bg="darkgreen")

@@ -1,5 +1,6 @@
 from tkinter import Frame, Label, Entry, W, E
 
+
 class BetDisplay:
     def __init__(self, window):
         self.bet_frame = Frame(window, bg="darkgreen")

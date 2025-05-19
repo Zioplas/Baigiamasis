@@ -1,5 +1,6 @@
 from tkinter import Toplevel, Label, Entry, Button
 
+
 class AddBalanceWindow:
     def __init__(self, master, balance_display):
         self.balance_display = balance_display
@@ -20,7 +21,6 @@ class AddBalanceWindow:
         self.error_label = Label(self.add_balance_window, text="", fg="red", bg="darkgreen")
         self.error_label.pack()
 
-
     def add_funds(self):
         try:
             amount = float(self.amount_entry.get())
@@ -30,16 +30,3 @@ class AddBalanceWindow:
             self.add_balance_window.destroy()
         except ValueError:
             self.error_label.config(text="Įveskite teisingą sumą!")
-
-
-
-
-
-
-
-
-
-
-
-
-
