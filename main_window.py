@@ -15,7 +15,6 @@ window.title("Baigiamoji kazinke")
 window.geometry("500x500")
 window.configure(bg="darkgreen")
 
-window.grid_rowconfigure(0, weight=0)
 window.grid_columnconfigure(0, weight=1)
 window.grid_columnconfigure(1, weight=1)
 window.grid_columnconfigure(2, weight=1)
@@ -29,8 +28,13 @@ symbols = [
     "seven.png",
     "watermelon.png",
 ]
-full_image_paths = [os.path.join(base_dir, "pictures", filename) for filename in symbols]
-machine = SlotMachine(full_image_paths, base_dir)
+full_image_paths = []
+for filename in symbols:
+    full_image_paths.append(os.path.join(base_dir, "pictures", filename))
+
+slot_display = SlotMachineDisplay(window, full_image_paths[0])
+
+machine = SlotMachine(full_image_paths)
 
 payout = Payout(base_dir)
 
@@ -43,8 +47,6 @@ bet_display = BetDisplay(window)
 win_display = WinDisplay(bet_display)
 
 error_display = ErrorDisplay(bet_display)
-
-slot_display = SlotMachineDisplay(window, full_image_paths[0])
 
 
 def spin_slots():
